@@ -6,20 +6,30 @@ using System.Threading.Tasks;
 
 namespace Range
 {
-    class Class1
+    class Range
     {
         private double from;
         private double to;
 
-        public Class1 (double from, double to)
+        public Range (double from, double to)
         {
             this.from = from;
             this.to = to;
         }
 
-        public double GetLength()
+        public double Propereties
         {
-            return to - from;
+            get;
+            set;
+        }
+
+        public double GetLength
+        {
+           get
+           {
+                return from - to; ;
+
+           }
         }
 
         public bool IsInside(double numberInRange)

@@ -11,9 +11,11 @@ namespace Range
 
         static void Main(string[] args)
         {
-            Class1 r = new Class1(2, 22);
+            Range r = new Range(2, 22);
+         
+           
 
-            Console.WriteLine("Length=" + r.GetLength());
+            Console.WriteLine("Length=" + r.GetLength);
 
             double numberInRange = Convert.ToDouble(Console.ReadLine());
 
