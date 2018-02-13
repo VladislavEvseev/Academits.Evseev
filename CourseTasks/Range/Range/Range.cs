@@ -8,33 +8,27 @@ namespace Range
 {
     class Range
     {
-        private double from;
-        private double to;
+        public double From { get; set; }
+        public double To { get; set; }
 
         public Range (double from, double to)
         {
-            this.from = from;
-            this.to = to;
+            From = from;
+            To = to;
         }
 
-        public double Propereties
-        {
-            get;
-            set;
-        }
-
-        public double GetLength
+        public double Length
         {
            get
            {
-                return from - to; ;
+                return From - To; ;
 
            }
         }
 
         public bool IsInside(double numberInRange)
         {
-            return from <= numberInRange && to >= numberInRange;
+            return From <= numberInRange && To >= numberInRange;
         }
 
     }

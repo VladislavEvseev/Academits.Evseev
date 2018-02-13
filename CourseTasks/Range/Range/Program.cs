@@ -15,7 +15,7 @@ namespace Range
          
            
 
-            Console.WriteLine("Length=" + r.GetLength);
+            Console.WriteLine("Length=" + r.Length);
 
             double numberInRange = Convert.ToDouble(Console.ReadLine());
 
