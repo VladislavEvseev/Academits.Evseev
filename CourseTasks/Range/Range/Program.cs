@@ -15,7 +15,7 @@ namespace Range
             double numberInRange = 8;
             r1.IsInside(numberInRange);
 
-            Range r2 = new Range(1, 19);
+            Range r2 = new Range(5, 27);
 
             if (r1.GetGeneral(r2) != null)
             {

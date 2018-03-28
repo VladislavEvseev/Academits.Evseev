@@ -115,27 +115,23 @@ namespace Range
             }
             else
             {
-                Range[] arrayOfRanges = new Range[1];
+                  
 
                 if ((r2.From >= To) || (From > r2.To))
                 {
-                    arrayOfRanges[0] = new Range(From, To);
-                    return arrayOfRanges;
+                    return new Range[1] { new Range(From, To) };
                 }
                 else if (From >= r2.From && To > r2.To)
                 {
-                    arrayOfRanges[0] = new Range(r2.To, To);
-                    return arrayOfRanges;
+                    return new Range[1] { new Range(r2.To, To) };
                 }
                 else if (From < r2.From && To <= r2.To)
                 {
-                    arrayOfRanges[0] = new Range(From, r2.From);
-                    return arrayOfRanges;
+                    return new Range[1] { new Range(From, r2.From) };
                 }
                 else
                 {
-                    arrayOfRanges = new Range[0];
-                    return arrayOfRanges;
+                    return new Range[0];
                 }
             }
         }
