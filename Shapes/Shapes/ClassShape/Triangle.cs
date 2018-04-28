@@ -8,26 +8,26 @@ namespace Shapes
 {
     public class Triangle : IShape
     {
-        private double x1;
+        private double a1;
         private double y1;
-        private double x2;
+        private double a2;
         private double y2;
-        private double x3;
+        private double a3;
         private double y3;
 
         public Triangle(double x1, double y1, double x2, double y2, double x3, double y3)
         {
-            this.x1 = x1;
+            this.a1 = x1;
             this.y1 = y1;
-            this.x2 = x2;
+            this.a2 = x2;
             this.y2 = y2;
-            this.x3 = x3;
+            this.a3 = x3;
             this.y3 = y3;
         }
 
         public double GetWidth()
         {
-            return Math.Max(Math.Max(x3, x1), x2) - Math.Min(Math.Min(x3, x1), x2);
+            return Math.Max(Math.Max(a3, a1), a2) - Math.Min(Math.Min(a3, a1), a2);
         }
 
         public double GetHeight()
@@ -37,7 +37,7 @@ namespace Shapes
 
         public double GetArea()
         {
-            return 0.5 * ((x1 - x3) * (y2 - y3) + (x2 - x3) * (y1 - y3));
+            return 0.5 * ((a1 - a3) * (y2 - y3) + (a2 - a3) * (y1 - y3));
         }
 
         private static double GetLengthOfSideOfTriangle(double x1, double y1, double x2, double y2)
@@ -47,7 +47,7 @@ namespace Shapes
 
         public double GetPerimeter()
         {
-            return GetLengthOfSideOfTriangle(x1, y1, x2, y2) + GetLengthOfSideOfTriangle(x2, y2, x3, y3) + GetLengthOfSideOfTriangle(x1, y1, x3, y3);
+            return GetLengthOfSideOfTriangle(a1, y1, a2, y2) + GetLengthOfSideOfTriangle(a2, y2, a3, y3) + GetLengthOfSideOfTriangle(a1, y1, a3, y3);
         }
     }
 }
