@@ -8,9 +8,9 @@ namespace Shapes
 {
     class ComparatorArea : IComparer<IShape>
     {
-        public int Compare(IShape x, IShape y)
+        public int Compare(IShape two, IShape one)
         {
-            return y.GetArea().CompareTo(x.GetArea());
+            return one.GetArea().CompareTo(two.GetArea());
         }
     }
 }

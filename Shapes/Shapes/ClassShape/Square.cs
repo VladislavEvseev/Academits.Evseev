@@ -34,5 +34,31 @@ namespace Shapes
         {
             return (width * 4);
         }
+
+        public override string ToString()
+        {
+            return "Square: width:" + width;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (this == obj)
+            {
+                return true;
+            }
+
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Square s1 = (Square)obj;
+            return (width == s1.width);
+        }
+
+        public override int GetHashCode()
+        {
+            return (int)width;
+        }
     }
 }

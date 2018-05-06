@@ -8,9 +8,9 @@ namespace Shapes
 {
     class ComparatorPerimeter : IComparer<IShape>
     {
-        public int Compare(IShape x, IShape y)
+        public int Compare(IShape two, IShape one)
         {
-            return y.GetPerimeter().CompareTo(x.GetPerimeter());
+            return one.GetPerimeter().CompareTo(two.GetPerimeter());
         }
     }
 }

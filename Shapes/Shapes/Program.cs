@@ -23,13 +23,7 @@ namespace Shapes
             Circle c1 = new Circle(5);
             Circle c2 = new Circle(4);
 
-            List<IShape> shapeObjects = new List<IShape>();
-            shapeObjects.Add(r1);
-            shapeObjects.Add(s1);
-            shapeObjects.Add(r2);
-            shapeObjects.Add(t1);
-            shapeObjects.Add(c1);
-            shapeObjects.Add(r1);
+            List<IShape> shapeObjects = new List<IShape> { r1, s1, r2, t1, c1, r1 };
 
             ComparatorArea sortedObjects = new ComparatorArea();
             shapeObjects.Sort(sortedObjects);

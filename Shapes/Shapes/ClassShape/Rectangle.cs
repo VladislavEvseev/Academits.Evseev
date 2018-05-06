@@ -36,5 +36,31 @@ namespace Shapes
         {
             return (width + height) * 2;
         }
+
+        public override string ToString()
+        {
+            return "Rectangle: width:" + width + ", height:" + height;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (this == obj)
+            {
+                return true;
+            }
+
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Rectangle r1 = (Rectangle)obj;
+            return (width == r1.width) && (height == r1.height);
+        }
+
+        public override int GetHashCode()
+        {
+            return (int)width ^ (int)height;
+        }
     }
 }
