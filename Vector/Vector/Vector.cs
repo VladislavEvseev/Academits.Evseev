@@ -17,38 +17,39 @@ namespace Vectors
             {
                 throw new ArgumentException("Вектор не может быть равен нулю");
             }
-            else
-            {
-                double[] vector = new double[n];
-                this.vector = vector;
-            }
+
+            this.vector = new double[n];
+
         }
+
         public Vector(Vector ob)
         {
             double[] vector = new double[ob.vector.Length];
             Array.Copy(ob.vector, vector, ob.vector.Length);
             this.vector = vector;
         }
+
         public Vector(double[] vector)
         {
             if (vector.Length <= 0)
             {
                 throw new ArgumentException("Вектор не может быть равен нулю");
             }
-            else
-            {
-                double[] vector1 = new double[vector.Length];
-                Array.Copy(vector, vector1, vector.Length);
-                this.vector = vector1;
-            }
+
+            double[] vector1 = new double[vector.Length];
+            Array.Copy(vector, vector1, vector.Length);
+            this.vector = vector1;
+
         }
+
         public Vector(int n, double[] vector)
         {
             if (n <= 0)
             {
                 throw new ArgumentException("Вектор не может быть равен нулю");
             }
-            else if (vector.Length > n)
+
+            if (vector.Length > n)
             {
                 this.vector = new double[n];
                 Array.Copy(vector, this.vector, n);
@@ -164,9 +165,9 @@ namespace Vectors
         {
             int prime = 37;
             int hash = 1;
-            foreach (double e in vector)
+            foreach (int e in vector)
             {
-                hash = prime * hash + (int)e;
+                hash = prime * hash + e;
             }
             return hash;
         }
