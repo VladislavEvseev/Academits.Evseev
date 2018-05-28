@@ -60,10 +60,12 @@ namespace Vectors
                 Array.Copy(vector, this.vector, vector.Length);
             }
         }
+
         public int GetSize()
         {
             return vector.Length;
         }
+
         public override string ToString()
         {
             return "{ " + string.Join(", ", vector) + " }";
@@ -103,6 +105,7 @@ namespace Vectors
             }
             return this;
         }
+
         public Vector GetMultipliedByScalar(double scalar)
         {
             for (int i = 0; i < vector.Length; i++)
@@ -111,10 +114,12 @@ namespace Vectors
             }
             return this;
         }
+
         public Vector GetRotation()
         {
             return GetMultipliedByScalar(-1);
         }
+
         public double GetLength()
         {
             double result = 0;
@@ -135,6 +140,7 @@ namespace Vectors
         {
             vector[index] = value;
         }
+
         public override bool Equals(object obj)
         {
             if (this == obj)
@@ -161,6 +167,7 @@ namespace Vectors
             }
             return true;
         }
+
         public override int GetHashCode()
         {
             int prime = 37;
@@ -171,6 +178,7 @@ namespace Vectors
             }
             return hash;
         }
+
         public static Vector GetAdditionVectors(Vector vector1, Vector vector2)
         {
             Vector result = new Vector(vector1);
@@ -182,6 +190,7 @@ namespace Vectors
             Vector result = new Vector(vector1);
             return result.GetDifference(vector2);
         }
+
         public static double GetVectorMultipliedByAnotherVector(Vector vector1, Vector vector2)
         {
             double result = 0;
